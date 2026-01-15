@@ -1,0 +1,75 @@
+/* Reset default margins */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Full screen center */
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f5f9ff;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Flex container */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  animation: popIn 1.2s ease-out;
+}
+
+/* Heading style */
+.container h1 {
+  color: blue;
+  font-size: 3rem;
+  margin-bottom: 10px;
+  animation: glow 1.5s infinite alternate;
+}
+
+/* Paragraph style */
+.container p {
+  color: green;
+  font-size: 1.2rem;
+}
+
+/* Pop-in animation */
+@keyframes popIn {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Glow animation for congratulations */
+@keyframes glow {
+  from {
+    text-shadow: 0 0 5px #66a3ff;
+  }
+  to {
+    text-shadow: 0 0 15px #0066ff;
+  }
+}
+
+/* Button style */
+button {
+  color: green;
+  font-size: 1.2rem;
+  padding: 8px 20px;
+  cursor: pointer;
+}
+
+.vertical {
+  display: flex;
+  flex-direction: column; /* vertical stacking */
+  align-items: center;
+}
